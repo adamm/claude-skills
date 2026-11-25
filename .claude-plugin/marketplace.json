@@ -1,0 +1,14 @@
+{
+  "name": "central-tracker-plugins",
+  "owner": {
+    "name": "Central Tracker"
+  },
+  "description": "Central Tracker: a personal project manager and task ledger kept in a Claude Doc.",
+  "plugins": [
+    {
+      "name": "central-tracker",
+      "source": "./plugins/central-tracker",
+      "description": "Personal project manager and task ledger in a Claude Doc: tasks, decisions with rationale, risks, dependencies, a product and project matrix, 1:1s, and full history."
+    }
+  ]
+}

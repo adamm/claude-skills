@@ -1,0 +1,502 @@
+{
+ "container": {
+  "kind": "project",
+  "create": {
+   "name": "Central Tracker",
+   "doc": {
+    "blocks": {
+     "asof": {
+      "type": "date",
+      "value": "{{TODAY}}"
+     },
+     "me": {
+      "type": "mention",
+      "user": "me"
+     }
+    },
+    "markdown": "# Central Tracker\n\nDashboard, regenerated on request.  Last refreshed <?claude block asof?> · <?claude block me?>\n\n## Due soon\n\nNothing due yet.  Items due in the next 14 days and anything overdue, soonest first.\n\n| ID | Item | Owner | Due | Status |\n|---|---|---|---|---|\n| — | No items due | — | — | — |\n\n## Watch list\n\nNothing blocked and no open risks yet.  Blocked or waiting items, open risks, and unmet dependencies.\n\n| ID | What | Why it matters | Status |\n|---|---|---|---|\n| — | Nothing to watch | — | — |\n\n## Upcoming 1:1s\n\nNo people added yet.\n\n| Person | Relationship | Next 1:1 | Open agenda items |\n|---|---|---|---|\n| — | — | — | — |"
+   }
+  }
+ },
+ "batch": [
+  {
+   "$lid": "f2",
+   "verb": "create",
+   "object": "file",
+   "payload": {
+    "value": {
+     "birthName": "Matrix.ldoc"
+    }
+   }
+  },
+  {
+   "$lid": "n2",
+   "verb": "create",
+   "object": "node",
+   "engine": "prose",
+   "payload": {
+    "parent": {
+     "object": "file",
+     "id": "$lid:f2"
+    },
+    "source": {
+     "as": "markdown",
+     "from": {
+      "kind": "inline",
+      "content": "# Matrix\n\nEvery product, client, and project, with its docs, repo, environments, and leads.  The Name column is the canonical project tag used on every other tab.  Blank cells are unknown, never guessed.\n\nType: Product, Client, or Project.  Parent: the product or client a project belongs to.  My involvement: Active, Paused, or blank.\n\n| Name | Type | Parent | My involvement | Description | PRD | TDD | Repo | Staging URL | Production URL | AIA | Tech Lead | Updated |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| — | No rows yet | — | — | — | — | — | — | — | — | — | — | — |"
+     }
+    }
+   }
+  },
+  {
+   "verb": "update",
+   "ref": {
+    "object": "file",
+    "id": "$lid:f2"
+   },
+   "payload": {
+    "kind": "value",
+    "value": {
+     "birthName": "Matrix.ldoc",
+     "content": {
+      "kind": "node",
+      "id": "$lid:n2"
+     }
+    }
+   }
+  },
+  {
+   "$lid": "f3",
+   "verb": "create",
+   "object": "file",
+   "payload": {
+    "value": {
+     "birthName": "Items.ldoc"
+    }
+   }
+  },
+  {
+   "$lid": "n3",
+   "verb": "create",
+   "object": "node",
+   "engine": "prose",
+   "payload": {
+    "parent": {
+     "object": "file",
+     "id": "$lid:f3"
+    },
+    "source": {
+     "as": "markdown",
+     "from": {
+      "kind": "inline",
+      "content": "# Items\n\nThe floating list: tasks, commitments, milestones, and open questions.  One row per item.  Types: Task, Commitment, Milestone, Question.  Statuses: Open, In progress, Waiting, Blocked, Done, Dropped.  Done and Dropped rows move to the Archive section below.\n\n## Active\n\n| ID | Item | Type | Project | Owner | Due | Status | Notes | Updated |\n|---|---|---|---|---|---|---|---|---|\n| — | No items yet | — | — | — | — | — | — | — |\n\n## Archive\n\n| ID | Item | Type | Project | Owner | Closed | Outcome |\n|---|---|---|---|---|---|---|\n| — | Nothing archived yet | — | — | — | — | — |"
+     }
+    }
+   }
+  },
+  {
+   "verb": "update",
+   "ref": {
+    "object": "file",
+    "id": "$lid:f3"
+   },
+   "payload": {
+    "kind": "value",
+    "value": {
+     "birthName": "Items.ldoc",
+     "content": {
+      "kind": "node",
+      "id": "$lid:n3"
+     }
+    }
+   }
+  },
+  {
+   "$lid": "f4",
+   "verb": "create",
+   "object": "file",
+   "payload": {
+    "value": {
+     "birthName": "Decisions.ldoc"
+    }
+   }
+  },
+  {
+   "$lid": "n4",
+   "verb": "create",
+   "object": "node",
+   "engine": "prose",
+   "payload": {
+    "parent": {
+     "object": "file",
+     "id": "$lid:f4"
+    },
+    "source": {
+     "as": "markdown",
+     "from": {
+      "kind": "inline",
+      "content": "# Decisions\n\nDated decisions with the rationale given.  A reversed decision is never deleted: its status becomes \"Superseded by D-n\" and the new decision gets its own row.\n\n| ID | Date | Decision | Rationale | Project | Decided by | Status |\n|---|---|---|---|---|---|---|\n| — | — | No decisions yet | — | — | — | — |"
+     }
+    }
+   }
+  },
+  {
+   "verb": "update",
+   "ref": {
+    "object": "file",
+    "id": "$lid:f4"
+   },
+   "payload": {
+    "kind": "value",
+    "value": {
+     "birthName": "Decisions.ldoc",
+     "content": {
+      "kind": "node",
+      "id": "$lid:n4"
+     }
+    }
+   }
+  },
+  {
+   "$lid": "f5",
+   "verb": "create",
+   "object": "file",
+   "payload": {
+    "value": {
+     "birthName": "Risks and dependencies.ldoc"
+    }
+   }
+  },
+  {
+   "$lid": "n5",
+   "verb": "create",
+   "object": "node",
+   "engine": "prose",
+   "payload": {
+    "parent": {
+     "object": "file",
+     "id": "$lid:f5"
+    },
+    "source": {
+     "as": "markdown",
+     "from": {
+      "kind": "inline",
+      "content": "# Risks and dependencies\n\n## Risks\n\nStatuses: Open, Watching, Mitigated, Occurred, Closed.\n\n| ID | Risk | Project | Impact | Mitigation | Owner | Status | Updated |\n|---|---|---|---|---|---|---|---|\n| — | No risks yet | — | — | — | — | — | — |\n\n## Dependencies\n\nWhat waits on what.  Statuses: Waiting, Met, Broken.\n\n| ID | Waiting item | Waits on | Project | Expected | Status | Updated |\n|---|---|---|---|---|---|---|\n| — | No dependencies yet | — | — | — | — | — |"
+     }
+    }
+   }
+  },
+  {
+   "verb": "update",
+   "ref": {
+    "object": "file",
+    "id": "$lid:f5"
+   },
+   "payload": {
+    "kind": "value",
+    "value": {
+     "birthName": "Risks and dependencies.ldoc",
+     "content": {
+      "kind": "node",
+      "id": "$lid:n5"
+     }
+    }
+   }
+  },
+  {
+   "$lid": "f6",
+   "verb": "create",
+   "object": "file",
+   "payload": {
+    "value": {
+     "birthName": "People.ldoc"
+    }
+   }
+  },
+  {
+   "$lid": "n6",
+   "verb": "create",
+   "object": "node",
+   "engine": "prose",
+   "payload": {
+    "parent": {
+     "object": "file",
+     "id": "$lid:f6"
+    },
+    "source": {
+     "as": "markdown",
+     "from": {
+      "kind": "inline",
+      "content": "# People\n\nEveryone you hold 1:1s with.  Each person gets a sub-tab under this one with their next 1:1 agenda and a dated notes log.  Commitments made in a 1:1 live on Items (Type: Commitment) and are referenced by ID from the person's tab.\n\n| Person | Relationship | Cadence | Next 1:1 | Open agenda items |\n|---|---|---|---|---|\n| — | No people yet | — | — | — |"
+     }
+    }
+   }
+  },
+  {
+   "verb": "update",
+   "ref": {
+    "object": "file",
+    "id": "$lid:f6"
+   },
+   "payload": {
+    "kind": "value",
+    "value": {
+     "birthName": "People.ldoc",
+     "content": {
+      "kind": "node",
+      "id": "$lid:n6"
+     }
+    }
+   }
+  },
+  {
+   "$lid": "f7",
+   "verb": "create",
+   "object": "file",
+   "payload": {
+    "value": {
+     "birthName": "Inbox.ldoc"
+    }
+   }
+  },
+  {
+   "$lid": "n7",
+   "verb": "create",
+   "object": "node",
+   "engine": "prose",
+   "payload": {
+    "parent": {
+     "object": "file",
+     "id": "$lid:f7"
+    },
+    "source": {
+     "as": "markdown",
+     "from": {
+      "kind": "inline",
+      "content": "# Inbox\n\nUpdates that could not be filed with confidence, in the user's words, dated, with the question that would settle them.  Cleared during review.\n\n- Empty"
+     }
+    }
+   }
+  },
+  {
+   "verb": "update",
+   "ref": {
+    "object": "file",
+    "id": "$lid:f7"
+   },
+   "payload": {
+    "kind": "value",
+    "value": {
+     "birthName": "Inbox.ldoc",
+     "content": {
+      "kind": "node",
+      "id": "$lid:n7"
+     }
+    }
+   }
+  },
+  {
+   "$lid": "f8",
+   "verb": "create",
+   "object": "file",
+   "payload": {
+    "value": {
+     "birthName": "Log.ldoc"
+    }
+   }
+  },
+  {
+   "$lid": "n8",
+   "verb": "create",
+   "object": "node",
+   "engine": "prose",
+   "payload": {
+    "parent": {
+     "object": "file",
+     "id": "$lid:f8"
+    },
+    "source": {
+     "as": "markdown",
+     "from": {
+      "kind": "inline",
+      "content": "# Log\n\nAppend-only history, newest first.  One line per change: date, IDs touched, what changed, and the user's words when they explain why.\n\n- {{TODAY}}: Tracker created."
+     }
+    }
+   }
+  },
+  {
+   "verb": "update",
+   "ref": {
+    "object": "file",
+    "id": "$lid:f8"
+   },
+   "payload": {
+    "kind": "value",
+    "value": {
+     "birthName": "Log.ldoc",
+     "content": {
+      "kind": "node",
+      "id": "$lid:n8"
+     }
+    }
+   }
+  },
+  {
+   "$lid": "f9",
+   "verb": "create",
+   "object": "file",
+   "payload": {
+    "value": {
+     "birthName": "Guide.ldoc"
+    }
+   }
+  },
+  {
+   "$lid": "n9",
+   "verb": "create",
+   "object": "node",
+   "engine": "prose",
+   "payload": {
+    "parent": {
+     "object": "file",
+     "id": "$lid:f9"
+    },
+    "source": {
+     "as": "markdown",
+     "from": {
+      "kind": "inline",
+      "content": "# Guide\n\nHow this tracker is kept.  The central-tracker skill reads this tab first on every run.\n\n## Next IDs\n\nT-1 · M-1 · C-1 · Q-1 · D-1 · R-1 · X-1\n\nT = task, M = milestone, C = commitment, Q = question, D = decision, R = risk, X = dependency.  IDs are never reused.\n\n## Project tags\n\nThe Name column on the Matrix tab is the canonical list of project tags.  A new product, client, or project gets a Matrix row, not a line here.\n\n## My allocation\n\nNot set.\n\n## Time zone\n\nNot set.  Until it is, dates and times follow the session's local time.\n\n## Where things go\n\n| Kind of update | Tab |\n|---|---|\n| Task, commitment, milestone, open question | Items |\n| A choice made, with or without rationale | Decisions |\n| Something that could go wrong | Risks and dependencies: Risks |\n| X can't start or finish until Y | Risks and dependencies: Dependencies |\n| 1:1 agenda item, 1:1 notes | People: that person's sub-tab |\n| A product, client, or project's description, PRD, TDD, repo, URLs, AIA, or tech lead | Matrix |\n| Anything ambiguous | Inbox |\n| Every change | Log |\n\n## Last review\n\nNever"
+     }
+    }
+   }
+  },
+  {
+   "verb": "update",
+   "ref": {
+    "object": "file",
+    "id": "$lid:f9"
+   },
+   "payload": {
+    "kind": "value",
+    "value": {
+     "birthName": "Guide.ldoc",
+     "content": {
+      "kind": "node",
+      "id": "$lid:n9"
+     }
+    }
+   }
+  },
+  {
+   "verb": "update",
+   "ref": {
+    "object": "project",
+    "id": "$lid:p"
+   },
+   "payload": {
+    "kind": "patch",
+    "patch": [
+     {
+      "op": "set",
+      "path": [
+       "tabs",
+       "$lid:f"
+      ],
+      "value": {
+       "name": "Dashboard",
+       "order": "a0"
+      }
+     },
+     {
+      "op": "set",
+      "path": [
+       "tabs",
+       "$lid:f2"
+      ],
+      "value": {
+       "name": "Matrix",
+       "order": "a05"
+      }
+     },
+     {
+      "op": "set",
+      "path": [
+       "tabs",
+       "$lid:f3"
+      ],
+      "value": {
+       "name": "Items",
+       "order": "a1"
+      }
+     },
+     {
+      "op": "set",
+      "path": [
+       "tabs",
+       "$lid:f4"
+      ],
+      "value": {
+       "name": "Decisions",
+       "order": "a2"
+      }
+     },
+     {
+      "op": "set",
+      "path": [
+       "tabs",
+       "$lid:f5"
+      ],
+      "value": {
+       "name": "Risks and dependencies",
+       "order": "a3"
+      }
+     },
+     {
+      "op": "set",
+      "path": [
+       "tabs",
+       "$lid:f6"
+      ],
+      "value": {
+       "name": "People",
+       "order": "a4"
+      }
+     },
+     {
+      "op": "set",
+      "path": [
+       "tabs",
+       "$lid:f7"
+      ],
+      "value": {
+       "name": "Inbox",
+       "order": "a5"
+      }
+     },
+     {
+      "op": "set",
+      "path": [
+       "tabs",
+       "$lid:f8"
+      ],
+      "value": {
+       "name": "Log",
+       "order": "a6"
+      }
+     },
+     {
+      "op": "set",
+      "path": [
+       "tabs",
+       "$lid:f9"
+      ],
+      "value": {
+       "name": "Guide",
+       "order": "a7"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
