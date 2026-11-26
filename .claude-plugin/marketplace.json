@@ -1,9 +1,9 @@
 {
-  "name": "central-tracker-plugins",
+  "name": "adamm-claude-skills",
   "owner": {
-    "name": "Central Tracker"
+    "name": "Adam McDaniel"
   },
-  "description": "Central Tracker: a personal project manager and task ledger kept in a Claude Doc.",
+  "description": "Claude skills for Adam",
   "plugins": [
     {
       "name": "central-tracker",
