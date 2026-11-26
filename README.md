@@ -46,9 +46,9 @@ Your tracker is private until you share it.  It can hold 1:1 notes about the peo
 
 ### Releasing changes
 
-Edit `plugins/central-tracker/skills/central-tracker/SKILL.md` or the template, open a PR, merge to the default branch.
+Edit `plugins/central-tracker/skills/central-tracker/SKILL.md` or the template, bump `version` in `plugins/central-tracker/.claude-plugin/plugin.json`, open a PR, merge to the default branch.
 
-`plugin.json` deliberately has no `version`, so Claude Code treats each new commit as a new version and users pick it up on their next refresh.  If you add a `version`, you must bump it on every release or users keep the cached copy.
+Claude Code caches the plugin by `version`.  If you merge a change without bumping it, users keep the cached copy.  Use semver: patch for wording fixes, minor for new behaviour, major for changes that need users to migrate their tracker.
 
 Organization sync: if a sync fails, the plugin can be temporarily removed for everyone until a fixed commit is synced.  Validate before merging (`claude plugin validate .` from the repo root).
 
