@@ -1,6 +1,6 @@
 {
   "name": "central-tracker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Personal project manager and task ledger in a Claude Doc: tasks, decisions with rationale, risks, dependencies, a product and project matrix, 1:1s, and full history. Each user gets their own tracker on first run.",
   "author": {
     "name": "Central Tracker"

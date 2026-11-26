@@ -128,6 +128,7 @@ Columns, in order: Name, Type, Parent, My involvement, Description, PRD, TDD, Re
 - "What does my tracker say for next week?": resolve the window to dates (next week = the coming Monday through Sunday), then search Items for Due in that window, plus milestones, 1:1s, and dependencies expected in it.  Answer in chat, grouped by day or by type, with IDs.  Include anything overdue as a separate line at the top.
 - "What's the status of X?": the item's row, its dependencies and risks, the latest Log lines that mention it, and related decisions.
 - "Why did we decide X?": the D row with rationale, and any superseded decision it replaced.
+- **Verify before saying something is due.**  The doc is the source of record, and another Claude session or the user may have changed it since you last read it.  Before producing a report, a list, a 1:1 agenda, or anything that says what is due, open, or scheduled for a subject or a date, read the relevant rows from the doc in this turn (with `sinceRev` if you read them earlier).  Never answer from rows read in an earlier turn, from this conversation's history, or from memory.
 - Answer from the doc only.  If the tracker doesn't hold the answer, say it doesn't.  Don't fill gaps from general knowledge or other conversations.
 
 ## Review
